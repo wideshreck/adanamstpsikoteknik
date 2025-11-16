@@ -6,11 +6,15 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -20,6 +24,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Adana MST Psikoteknik" }],
   creator: "Adana MST Psikoteknik",
   publisher: "Adana MST Psikoteknik",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  themeColor: '#0f172a',
   robots: {
     index: true,
     follow: true,

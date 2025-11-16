@@ -1,15 +1,15 @@
 export default function About() {
   return (
-    <section id="hakkimizda" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="hakkimizda" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Sol taraf - İçerik */}
+          {/* Sol taraf - İçerik with animations */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight animate-fadeInUp">
                 Adana MST Psikoteknik
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed animate-fadeInUp animation-delay-100">
                 Sağlık Bakanlığı onaylı profesyonel psikoteknik değerlendirme merkezi
               </p>
             </div>
@@ -27,10 +27,10 @@ export default function About() {
               </p>
             </div>
 
-            {/* Özellikler */}
+            {/* Özellikler with animations */}
             <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              <div className="flex items-start gap-3">
-                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3 animate-fadeInUp animation-delay-200 hover:scale-105 transition-transform">
+                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
                   <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>

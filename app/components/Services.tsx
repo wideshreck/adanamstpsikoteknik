@@ -43,28 +43,29 @@ export default function Services() {
   };
 
   return (
-    <section id="hizmetler" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <section id="hizmetler" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto">
-        {/* Başlık */}
+        {/* Başlık with animation */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 animate-fadeIn">
             Hizmetlerimiz
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto animate-fadeIn animation-delay-100">
             Sağlık Bakanlığı standartlarında profesyonel psikoteknik değerlendirme
           </p>
         </div>
 
-        {/* Hizmet Kartları */}
+        {/* Hizmet Kartları with animations */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {services.map((service, index) => {
             const colors = getColorClasses();
             return (
               <div
                 key={index}
-                className="bg-white rounded-lg p-8 border border-slate-200 hover:border-slate-300 transition-all duration-200"
+                className={`bg-white rounded-lg p-8 border border-slate-200 hover:border-slate-300 transition-all duration-300 card-shadow animate-fadeInUp`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-14 h-14 ${colors.icon} rounded-lg flex items-center justify-center mb-6`}>
+                <div className={`w-14 h-14 ${colors.icon} rounded-lg flex items-center justify-center mb-6 hover:scale-110 transition-transform`}>
                   {service.icon}
                 </div>
 
@@ -93,8 +94,8 @@ export default function Services() {
           })}
         </div>
 
-        {/* Süreç Bilgisi */}
-        <div className="bg-slate-900 rounded-lg p-10 sm:p-12 text-white">
+        {/* Süreç Bilgisi with animation */}
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg p-10 sm:p-12 text-white shadow-xl animate-fadeInUp">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-6">
               <h3 className="text-3xl sm:text-4xl font-bold leading-tight">
